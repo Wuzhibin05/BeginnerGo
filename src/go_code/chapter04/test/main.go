@@ -3,9 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	//定义一个变量保存华氏温度，华氏温度转换摄氏温度的公式为：
-	//5/9*(华氏温度-100),请求出华氏温度对应的摄氏温度
-	var huashi float32 = 134.2
-	var sheshi float32 = 5.0 / 9 * (huashi - 100)
-	fmt.Printf("%v 对应的摄氏温度=%v \n", huashi, sheshi)
+	var name string
+	var age byte
+	var sal float64
+	var isPass bool
+
+	fmt.Println("请输入姓名 年龄，薪水，否通过考试，使用空格隔开 ")
+	fmt.Scanf("%s %d %f %t", &name, &age, &sal, &isPass)
+	fmt.Printf("名字是 %v \n 年龄是 %v \n 薪水是 %v \n 是否通过考试 %v \n", name, age, sal, isPass)
 }

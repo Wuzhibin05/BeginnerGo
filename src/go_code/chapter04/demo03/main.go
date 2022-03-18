@@ -16,5 +16,4 @@ func main() {
 	fmt.Println(n1 <= n2) //flase
 	flag := n1 > n2
 	fmt.Println("flag=", flag)
-
 }
