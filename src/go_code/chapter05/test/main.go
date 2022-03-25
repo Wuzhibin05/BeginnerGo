@@ -3,25 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	var week string
-	fmt.Println("请输入一个字符（a,b,c,d,e,f,g）:")
-	fmt.Scanln(&week)
-	switch week {
-	case "a":
-		fmt.Println("周一猴子穿新衣。")
-	case "b":
-		fmt.Println("周二猴子穿新衣。")
-	case "c":
-		fmt.Println("周三猴子穿新衣。")
-	case "d":
-		fmt.Println("周四猴子穿新衣。")
-	case "e":
-		fmt.Println("周五猴子穿新衣。")
-	case "f":
-		fmt.Println("周六猴子穿新衣。")
-	case "g":
-		fmt.Println("周日猴子穿新衣。")
-	default:
-		fmt.Println("输入的字符不在要求的范围内！")
+	var avg0 float64
+	var total float64
+	for i := 0; i < 3; i++ {
+		sum := 0.0
+		avg1 := 0.0
+		for j := 1; j < 6; j++ {
+			var score float64 = 0.0
+			fmt.Printf("请输入第%d班的第%d孩子的成绩:", i+1, j+1)
+			fmt.Scanf("%d", &score)
+			sum += score
+		}
+		avg1 = sum / 5
+		total += sum
+		fmt.Printf("第%d个班的平均分为：%f", i, avg1)
 	}
+	avg0 = total / 15
+	fmt.Printf("三个班的平均分为：%f", avg0)
 }
