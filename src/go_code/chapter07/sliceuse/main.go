@@ -10,6 +10,7 @@ func main() {
 	var slice []float64 = make([]float64, 5, 10)
 	slice[1] = 10
 	slice[3] = 20
+
 	//对于切片，必须make使用.
 	fmt.Println(slice)
 	fmt.Println("slice的size=", len(slice))
